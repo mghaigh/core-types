@@ -1,0 +1,13 @@
+name: "core-types"
+version: "1.0"
+baseDir: ${user.dir}
+modelDirName: "uml-model"
+imagesDirName: "images"
+modelFileType: "json"
+types: "Types"
+transforms:
+  eaXmiLoader:
+    configPath: "config/loaders/ea-xmi/application.yaml" # This is the path relative to the basePath
+#  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
+#  openapi: "config/generators/openapi/application.yaml" # This is the path relative to the basePath
+#  mkdoc: "config/generators/mkdoc/application.yaml" # This is the path relative to the basePath
