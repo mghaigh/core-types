@@ -1,13 +1,18 @@
 name: "core-types"
 version: "1.0"
-baseDir: ${user.dir}
-modelDirName: "uml-model"
+# modelUrl: "file:///C:/Users/martin/Projects/models/core-types/core-types.xml"
+modelUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
 imagesDirName: "images"
 modelFileType: "json"
 types: "Types"
+loader:
+#  configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/loaders/ea-xmi/eaXmiLoader.yaml"
+  configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/application.yaml"
 transforms:
-  eaXmiLoader:
-    configPath: "config/loaders/ea-xmi/application.yaml" # This is the path relative to the basePath
+#  openapi:
+#    configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/openapi.yaml"
+#  eaXmiLoader:
+#    configPath: "config/loaders/ea-xmi/application.yaml" # This is the path relative to the basePath
 #  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
 #  openapi: "config/generators/openapi/application.yaml" # This is the path relative to the basePath
 #  mkdoc: "config/generators/mkdoc/application.yaml" # This is the path relative to the basePath
