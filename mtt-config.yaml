@@ -10,7 +10,7 @@ loader:
   configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/application.yaml"
 transforms:
   openapi:
-    configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/openapi.yaml"
+    configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/config.yaml"
 #  eaXmiLoader:
 #    configPath: "config/loaders/ea-xmi/application.yaml" # This is the path relative to the basePath
 #  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
