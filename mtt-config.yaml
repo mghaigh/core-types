@@ -8,7 +8,7 @@ types: "Types"
 loader:
 #  configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/loaders/ea-xmi/eaXmiLoader.yaml"
   configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/application.yaml"
-transforms:
+#transforms:
 #  openapi:
 #    configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/openapi.yaml"
 #  eaXmiLoader:
