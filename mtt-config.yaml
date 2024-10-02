@@ -7,7 +7,8 @@ modelFileType: "json"
 # queries:
 types: "Core Types"
 # dependencies:
-outputFolder: "generated"
+# outputFolder: "generated"
+transformsFolder: "generated"
 transforms:
   eaxmiloader:
     configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
