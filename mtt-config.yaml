@@ -7,7 +7,7 @@ modelFileType: "json"
 types: "Core Types"
 loader:
 #  configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/loaders/ea-xmi/config.yaml"
-  configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/application.yaml"
+  configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
 transforms:
   openapi:
     configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/config.yaml"
