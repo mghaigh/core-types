@@ -2,15 +2,12 @@ name: "core-types"
 version: "1.0"
 # modelUrl: "file:///C:/Users/martin/Projects/models/core-types/core-types.xml"
 modelUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
-imagesDirName: "images"
+imagesFolder: "images"
 modelFileType: "json"
+# queries:
 types: "Core Types"
-dependencies:
+# dependencies:
 outputFolder: "generated"
-#loader:
-#  configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/loaders/ea-xmi/config.yaml"
-#  configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
-#  transformFolder: "mtt-models"
 transforms:
   eaxmiloader:
     configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
