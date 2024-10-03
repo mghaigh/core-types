@@ -8,11 +8,11 @@ modelFileType: "json"
 types: "Core Types"
 # dependencies:
 # outputFolder: "generated"
-transformsFolder: "generated"
+outputFolder: "generated"
 transforms:
   eaxmiloader:
     configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
-    transformFolder: "mtt-models"
+    outputFolder: "mtt-models"
 #  openapi:
 #    configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/config.yaml"
 #  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
