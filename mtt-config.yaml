@@ -17,6 +17,6 @@ transforms:
 #    configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/config.yaml"
 #  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
   aoco:
-    configUrl: "https://github.com/mghaigh/library/blob/library-v1/config/generators/aoco/config.yaml"
+    configUrl: "https://github.com/mghaigh/core-types/blob/master/config/generators/aoco/aoco.yaml"
     outputFolder: "specs/aoco"
 #  mkdoc: "config/generators/mkdoc/application.yaml" # This is the path relative to the basePath
