@@ -3,7 +3,7 @@ version: "1.0"
 # modelUrl: "file:///C:/Users/martin/Projects/models/core-types/core-types.xml"
 modelUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
 imagesFolder: "images"
-modelFileType: "json"
+dtoModelFileType: "xml"
 # queries:
 types: "Core Types"
 # dependencies:
