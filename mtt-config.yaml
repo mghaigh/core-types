@@ -1,21 +1,25 @@
-name: "core-types"
 version: "1.0"
 # modelUrl: "file:///C:/Users/martin/Projects/models/core-types/core-types.xml"
 modelUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
-imagesFolder: "images"
-dtoModelFileType: "json"
+imagesDir: "images"
 # queries:
 types: "Core Types"
 # dependencies:
 # outputFolder: "generated"
-outputFolder: "generated"
-transforms:
-  eaxmiloader:
-    configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
-    outputFolder: "mtt-models"
-#  openapi:
-#    configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/config.yaml"
-#  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
+outputDir: "generated"
+modelConfig:
+  typesPackageName: "Types"
+  defaults:
+    classActions:
+      - CREATE
+      - READ
+loader:
+  configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
+  outputFolder: "mtt-models"
+generators:
+  #  openapi:
+  #  configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/config.yaml"
+  #  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
   aoco:
     configUrl: "https://github.com/mghaigh/core-types/blob/master/config/generators/aoco/aoco.yaml"
     outputFolder: "specs/aoco"
