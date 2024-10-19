@@ -15,12 +15,12 @@ modelConfig:
       - READ
 loader:
   configUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
-  outputFolder: "mtt-models"
+  outputDir: "mtt-models"
 generators:
   #  openapi:
   #  configUrl: "file:///C:/Users/martin/Projects/models/core-types/config/generators/openapi/config.yaml"
   #  graphql: "config/generators/graphql/application.yaml" # This is the path relative to the basePath
   aoco:
     configUrl: "https://github.com/mghaigh/core-types/blob/master/config/generators/aoco/aoco.yaml"
-    outputFolder: "specs/aoco"
+    outputDir: "specs/aoco"
 #  mkdoc: "config/generators/mkdoc/application.yaml" # This is the path relative to the basePath
