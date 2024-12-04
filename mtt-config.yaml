@@ -3,9 +3,8 @@ modelFileUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
 imagesDir: "images"
 # queries:
 types: "Core Types"
-# dependencies:
-# outputFolder: "generated"
-outputDirUrl: "file:/core-types/generated"
+outputDirUrl: "https://github.com/mghaigh/core-types/tree/master/generated/"
+# outputDirUrl: "file:/core-types/generated"
 modelConfig:
   typesPackageName: "Types"
   defaults:
