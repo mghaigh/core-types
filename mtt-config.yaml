@@ -3,10 +3,6 @@ outputDirUrl: "https://github.com/mghaigh/core-types/blob/master/generated"
 modelConfig:
   packageNames:
     typesPackage: "Core Types"
-    defaults:
-      classActions:
-        - CREATE
-        - READ
 loader:
   configFileUrl: "https://github.com/mghaigh/common-config/blob/master/config/loaders/ea-xmi/config.yaml"
   outputSubDir: "mtt-models"
