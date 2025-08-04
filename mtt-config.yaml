@@ -1,16 +1,12 @@
-# modelUrl: "file:///C:/Users/martin/Projects/models/core-types/core-types.xml"
 modelFileUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
-imagesDir: "images"
-# queries:
-types: "Core Types"
-outputDirUrl: "https://github.com/mghaigh/core-types/tree/master/generated/"
-# outputDirUrl: "file:/core-types/generated"
+outputDirUrl: "https://github.com/mghaigh/core-types/blob/master/generated"
 modelConfig:
-  typesPackageName: "Types"
-  defaults:
-    classActions:
-      - CREATE
-      - READ
+  packageNames:
+    typesPackage: "Core Types"
+    defaults:
+      classActions:
+        - CREATE
+        - READ
 loader:
   configFileUrl: "https://github.com/mghaigh/core-types/blob/master/config/loaders/ea-xmi/config.yaml"
   outputSubDir: "mtt-models"
