@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+
+---
 
 ### Type: Primitive Type
 
