@@ -1,6 +1,6 @@
 modelFileUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
 outputDirUrl: "https://github.com/mghaigh/core-types/blob/master/generated"
-modelConfig:
+# modelConfig:
   packageNames:
     typesPackage: "Core Types"
 loader:
