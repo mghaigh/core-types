@@ -4,7 +4,7 @@ modelConfig:
   packageNames:
     typesPackage: "Core Types"
 loader:
-  generatorUrl: "http://localhost:8005"
+  generatorUrl: "http://localhost:7019"
   configFileUrl: "https://github.com/mghaigh/common-config/blob/master/config/loaders/ea-xmi/config.yaml"
 generators:
   #  MkDocs:
