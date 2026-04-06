@@ -1,15 +1,15 @@
-modelFileUrl: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
-outputDirUrl: "https://github.com/mghaigh/core-types/blob/master/generated/"
+modelFileURI: "https://github.com/mghaigh/core-types/blob/master/core-types.xml"
+outputDirURI: "https://github.com/mghaigh/core-types/blob/master/generated/"
 modelConfig:
   packageNames:
     typesPackage: "Core Types"
 loader:
-  loaderUrl: "http://localhost:7010"
-  configFileUrl: "https://github.com/mghaigh/common-config/blob/master/config/loaders/ea-xmi/config.yaml"
+  loaderURL: "http://localhost:7010"
+  configFileURI: "https://github.com/mghaigh/common-config/blob/master/config/loaders/ea-xmi/config.yaml"
 generators:
   #  MkDocs:
-  - generatorUrl: "http://localhost:9020"
-    configFileUrl: "https://github.com/mghaigh/common-config/blob/master/config/generators/mkdoc/config.yaml"
+  - generatorURL: "http://localhost:9020"
+    configFileURI: "https://github.com/mghaigh/common-config/blob/master/config/generators/mkdoc/config.yaml"
   #  Screening:
   # - generatorUrl: "http://localhost:9035"
   #  configFileUrl: "file:/common-config/config/generators/reversed/config.yaml"
