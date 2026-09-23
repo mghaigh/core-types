@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='windows-1252' ?>
-<xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0" xmlns:NIEM_Common_profile="http://www.omg.org/spec/NIEM-UML/20130801/NIEM_Common_Profile">
-	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1712"/>
+<xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:thecustomprofile="http://www.sparxsystems.com/profiles/thecustomprofile/1.0" xmlns:NIEM_Common_profile="http://www.omg.org/spec/NIEM-UML/20130801/NIEM_Common_Profile" xmlns:MARTE="http://www.sparxsystems.com/profiles/MARTE/1.0">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1716"/>
 	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
 		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_FDDBA952_32D5_4cf9_A835_0EFBC35802AD" name="Core Types" visibility="public">
 			<packagedElement xmi:type="uml:DataType" xmi:id="EAID_70255856_A8A7_4870_87E9_6C41930066F8" name="Duration" visibility="public" isAbstract="true">
@@ -73,18 +73,24 @@
 			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_11865AA0_5CE9_4cbd_BD49_F156817C4864" name="Primitives" visibility="public">
 				<packagedElement xmi:type="uml:DataType" xmi:id="EAID_73383101_232D_4d80_B7C0_FC4F266F6A4B" name="Boolean" visibility="public"/>
 				<packagedElement xmi:type="uml:DataType" xmi:id="EAID_3968924B_0A9E_4b6a_9BFA_41F6DF04CF8F" name="Bytes" visibility="public"/>
+				<packagedElement xmi:type="uml:DataType" xmi:id="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8" name="Decimal" visibility="public"/>
 				<packagedElement xmi:type="uml:DataType" xmi:id="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9" name="Integer" visibility="public"/>
-				<packagedElement xmi:type="uml:DataType" xmi:id="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8" name="Number" visibility="public"/>
 				<packagedElement xmi:type="uml:DataType" xmi:id="EAID_62E0C380_C021_4edb_8E48_D46BBD4C0900" name="String" visibility="public"/>
+				<packagedElement xmi:type="uml:DataType" xmi:id="EAID_49FF0B4C_F0BC_4c84_932C_C1218EF9C945" name="Unit" visibility="public"/>
 			</packagedElement>
 		</packagedElement>
+		<MARTE:GaEventTrace base_NamedElement="EAID_861A642B_1887_4e5d_8AF0_0516AC5E9756" format="date"/>
 		<thecustomprofile:primitive base_DataType="EAID_861A642B_1887_4e5d_8AF0_0516AC5E9756"/>
+		<MARTE:GaEventTrace base_NamedElement="EAID_590AB0A5_C722_4aa2_A1F5_0246962A512C" format="date-time"/>
 		<thecustomprofile:primitive base_DataType="EAID_590AB0A5_C722_4aa2_A1F5_0246962A512C"/>
 		<NIEM_Common_profile:ValueRestriction base_DataType="EAID_01E315C6_B0C4_45dd_8D8F_12D3297D2AD7" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"/>
+		<MARTE:GaEventTrace base_NamedElement="EAID_01E315C6_B0C4_45dd_8D8F_12D3297D2AD7" format="email"/>
 		<thecustomprofile:primitive base_DataType="EAID_01E315C6_B0C4_45dd_8D8F_12D3297D2AD7"/>
+		<MARTE:GaEventTrace base_NamedElement="EAID_35C65090_3331_464b_8C3B_273E7DD7F6FA" format="uri"/>
 		<thecustomprofile:primitive base_DataType="EAID_35C65090_3331_464b_8C3B_273E7DD7F6FA"/>
 		<NIEM_Common_profile:ValueRestriction base_DataType="EAID_7CE17C08_3EDB_4be4_9718_EA9A19F868BC" pattern="^https?://[^/\s]+?\.[^/\s]+.*[\/\#][A-Za-z0-9]+"/>
 		<thecustomprofile:primitive base_DataType="EAID_7CE17C08_3EDB_4be4_9718_EA9A19F868BC"/>
+		<MARTE:GaEventTrace base_NamedElement="EAID_76F2F48E_360C_4a16_BF8E_8B5737F69A1F" format="uuid"/>
 		<thecustomprofile:primitive base_DataType="EAID_76F2F48E_360C_4a16_BF8E_8B5737F69A1F"/>
 		<thecustomprofile:minimum base_DataType="EAID_EF8059BB_DC1F_44bd_9408_839AF45F96BF" minimum="-90"/>
 		<thecustomprofile:maximum base_DataType="EAID_EF8059BB_DC1F_44bd_9408_839AF45F96BF" maximum="90"/>
@@ -94,24 +100,25 @@
 		<thecustomprofile:primitive base_DataType="EAID_7924DF71_9473_4e25_A1E1_FFD73DBDED0E"/>
 		<thecustomprofile:primitive base_DataType="EAID_73383101_232D_4d80_B7C0_FC4F266F6A4B"/>
 		<thecustomprofile:primitive base_DataType="EAID_3968924B_0A9E_4b6a_9BFA_41F6DF04CF8F"/>
-		<thecustomprofile:primitive base_DataType="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
 		<thecustomprofile:primitive base_DataType="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8"/>
+		<thecustomprofile:primitive base_DataType="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
 		<thecustomprofile:primitive base_DataType="EAID_62E0C380_C021_4edb_8E48_D46BBD4C0900"/>
+		<thecustomprofile:primitive base_DataType="EAID_49FF0B4C_F0BC_4c84_932C_C1218EF9C945"/>
 	</uml:Model>
 	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
 		<elements>
 			<element xmi:idref="EAPK_FDDBA952_32D5_4cf9_A835_0EFBC35802AD" xmi:type="uml:Package" name="Core Types" scope="public">
 				<model package2="EAID_FDDBA952_32D5_4cf9_A835_0EFBC35802AD" package="EAPK_B3D3C802_2A73_4b5b_98D9_C5F778D794BA" tpos="0" ea_localid="8" ea_eleType="package"/>
 				<properties documentation="Updated to add Error type" isSpecification="false" sType="Package" nType="0" scope="public"/>
-				<project author="martin" version="1.1" phase="1.0" created="2023-01-26 09:25:10" modified="2023-01-27 11:06:14" complexity="1" status="Proposed"/>
+				<project author="martin" version="1.0.2" phase="1.0" created="2023-01-26 09:25:10" modified="2026-05-04 14:12:58" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
 				<xrefs/>
 				<extendedProperties tagged="0" package_name="Model"/>
-				<packageproperties version="1.1" owner="martin" xmiver="Enterprise Architect XMI 2.1/UML 2.1" tpos="0"/>
+				<packageproperties version="1.0.2" owner="martin" xmiver="Enterprise Architect XMI 2.1/UML 2.1" tpos="0"/>
 				<paths xmlpath="C:\Users\martin\Projects\repos\core-types\core-types.xml"/>
-				<times created="2023-01-26 09:25:10" modified="2025-03-11 03:45:45" lastloaddate="2025-03-11 03:45:45" lastsavedate="2026-04-10 07:42:18"/>
+				<times created="2023-01-26 09:25:10" modified="2026-05-04 14:12:58" lastloaddate="2025-03-11 03:45:45" lastsavedate="2026-04-28 08:29:17"/>
 				<flags iscontrolled="1" isprotected="0" batchsave="0" batchload="0" usedtd="0" logxml="0" packageFlags="isModel=1;VICON=3;Recurse=1;"/>
 			</element>
 			<element xmi:idref="EAID_70255856_A8A7_4870_87E9_6C41930066F8" xmi:type="uml:DataType" name="Duration" scope="public">
@@ -263,7 +270,9 @@
 				<project author="Martin" version="1.0" phase="1.0" created="2021-10-17 12:15:02" modified="2026-04-10 07:15:18" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
+				<tags>
+					<tag xmi:id="EAID_A7DE28EC_13BF_4c4b_914F_A61A0C86047C" name="format" value="date" modelElement="EAID_861A642B_1887_4e5d_8AF0_0516AC5E9756"/>
+				</tags>
 				<xrefs value="$XREFPROP=$XID={18B23EDE-DFB0-4bb8-B965-19BDA0019F22}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={861A642B-1887-4e5d-8AF0-0516AC5E9756}$CLT;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Specialized Primitives"/>
 				<links>
@@ -276,7 +285,9 @@
 				<project author="Martin" version="1.0" phase="1.0" created="2021-06-18 12:43:01" modified="2026-04-10 07:15:27" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
+				<tags>
+					<tag xmi:id="EAID_B179C283_2B0A_444f_84C5_646C9A594DF8" name="format" value="date-time" modelElement="EAID_590AB0A5_C722_4aa2_A1F5_0246962A512C"/>
+				</tags>
 				<xrefs value="$XREFPROP=$XID={A4E77DE3-B151-4b7a-B9B2-AEBE26B3419F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={590AB0A5-C722-4aa2-A1F5-0246962A512C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Specialized Primitives"/>
 				<links>
@@ -290,6 +301,7 @@
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
+					<tag xmi:id="EAID_3A91DB59_61AC_4b0f_8F06_6AA0447A0B53" name="format" value="email" modelElement="EAID_01E315C6_B0C4_45dd_8D8F_12D3297D2AD7"/>
 					<tag xmi:id="EAID_A7D43357_4182_4dcc_9634_2F3898DC3AA5" name="pattern" value="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" modelElement="EAID_01E315C6_B0C4_45dd_8D8F_12D3297D2AD7"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={08D14E59-2713-4632-92AB-63BF20305FE3}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={01E315C6-B0C4-45dd-8D8F-12D3297D2AD7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
@@ -304,7 +316,9 @@
 				<project author="Martin" version="1.0" phase="1.0" created="2021-06-18 12:43:17" modified="2026-04-10 07:15:47" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
+				<tags>
+					<tag xmi:id="EAID_AC2FE19F_76F2_4333_88F0_71A3B49E8789" name="format" value="uri" modelElement="EAID_35C65090_3331_464b_8C3B_273E7DD7F6FA"/>
+				</tags>
 				<xrefs value="$XREFPROP=$XID={89C7B442-E72D-4590-B755-C9B84C2E9F86}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={35C65090-3331-464b-8C3B-273E7DD7F6FA}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Specialized Primitives"/>
 				<links>
@@ -332,7 +346,9 @@
 				<project author="Martin" version="1.0" phase="1.0" created="2021-06-18 12:43:10" modified="2026-04-10 07:16:08" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags/>
+				<tags>
+					<tag xmi:id="EAID_AC95FB05_D6EA_481a_8CB6_6F171408ECF7" name="format" value="uuid" modelElement="EAID_76F2F48E_360C_4a16_BF8E_8B5737F69A1F"/>
+				</tags>
 				<xrefs value="$XREFPROP=$XID={395A09B4-6EC5-4c90-BA10-9D54309AAF9F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={76F2F48E-360C-4a16-BF8E-8B5737F69A1F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Specialized Primitives"/>
 				<links>
@@ -411,33 +427,18 @@
 			</element>
 			<element xmi:idref="EAID_3968924B_0A9E_4b6a_9BFA_41F6DF04CF8F" xmi:type="uml:DataType" name="Bytes" scope="public">
 				<model package="EAPK_11865AA0_5CE9_4cbd_BD49_F156817C4864" tpos="0" ea_localid="50" ea_eleType="element"/>
-				<properties documentation="A signed 8-bit integer, ranges from -128 to 127" isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="primitive" isRoot="false" isLeaf="false" isAbstract="false"/>
-				<project author="Martin" version="1.0" phase="1.0" created="2021-12-09 08:39:59" modified="2026-04-10 07:14:30" complexity="1" status="Proposed"/>
+				<properties documentation="Represents a collection of one or more bytes of information, often used to represent binary data such as compressed files." isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="primitive" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="Martin" version="1.0" phase="1.0" created="2021-12-09 08:39:59" modified="2026-04-28 08:18:24" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
 				<xrefs value="$XREFPROP=$XID={20164AFA-7723-4b0e-9C37-942ACB2EC857}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={3968924B-0A9E-4b6a-9BFA-41F6DF04CF8F}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
 				<extendedProperties tagged="0" package_name="Primitives"/>
 			</element>
-			<element xmi:idref="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9" xmi:type="uml:DataType" name="Integer" scope="public">
-				<model package="EAPK_11865AA0_5CE9_4cbd_BD49_F156817C4864" tpos="0" ea_localid="73" ea_eleType="element"/>
-				<properties documentation="A signed 32-bit integer, ranges from --2,147,483,648 to 2,147,483,647." isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="primitive" isRoot="false" isLeaf="false" isAbstract="false"/>
-				<project author="martin" version="1.0" phase="1.0" created="2026-04-09 14:14:02" modified="2026-04-10 07:14:38" complexity="1" status="Proposed"/>
-				<code gentype="Java"/>
-				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
-				<tags>
-					<tag xmi:id="EAID_891DB606_91D7_8991_8463_4E7D41AFDC11" name="duration" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
-					<tag xmi:id="EAID_F5985CA1_1032_0910_88FE_A3E79C889E5B" name="finish" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
-					<tag xmi:id="EAID_00000EBD_857B_fd85_AEE0_43D882F41E7A" name="on" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
-					<tag xmi:id="EAID_086249AE_4F1F_d24f_AB8E_2B270F785CB8" name="start" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
-				</tags>
-				<xrefs value="$XREFPROP=$XID={8160A2AD-D770-47d0-8C44-E9611D426544}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={B5ED2C40-3748-11A8-8737-76EA90739BA9}$CLT;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="Primitives"/>
-			</element>
-			<element xmi:idref="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8" xmi:type="uml:DataType" name="Number" scope="public">
+			<element xmi:idref="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8" xmi:type="uml:DataType" name="Decimal" scope="public">
 				<model package="EAPK_11865AA0_5CE9_4cbd_BD49_F156817C4864" tpos="0" ea_localid="61" ea_eleType="element"/>
-				<properties documentation="A generic number type that can represent both integer and decimal numbers." isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="primitive" isRoot="false" isLeaf="false" isAbstract="false"/>
-				<project author="martin" version="1.0" phase="1.0" created="2025-03-04 22:49:49" modified="2026-04-10 07:21:10" complexity="1" status="Proposed"/>
+				<properties documentation="Represents decimal numbers which can include fractions of numbers; as opposed to the Integer type. Decimals are often called floating-point numbers in programming languages." isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="primitive" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="martin" version="1.0" phase="1.0" created="2025-03-04 22:49:49" modified="2026-04-28 08:17:14" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags>
@@ -452,6 +453,21 @@
 					<Generalization xmi:id="EAID_2B8CB9DA_354A_427c_8988_0FAB7CBD014A" start="EAID_7924DF71_9473_4e25_A1E1_FFD73DBDED0E" end="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8"/>
 					<Generalization xmi:id="EAID_407B58CA_0897_401d_B5D5_B2D69E623D9E" start="EAID_EF8059BB_DC1F_44bd_9408_839AF45F96BF" end="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8"/>
 				</links>
+			</element>
+			<element xmi:idref="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9" xmi:type="uml:DataType" name="Integer" scope="public">
+				<model package="EAPK_11865AA0_5CE9_4cbd_BD49_F156817C4864" tpos="0" ea_localid="73" ea_eleType="element"/>
+				<properties documentation="A whole number, as opposed to a Decimal which can include fractional data. " isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="primitive" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="martin" version="1.0" phase="1.0" created="2026-04-09 14:14:02" modified="2026-04-28 08:15:55" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_891DB606_91D7_8991_8463_4E7D41AFDC11" name="duration" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
+					<tag xmi:id="EAID_F5985CA1_1032_0910_88FE_A3E79C889E5B" name="finish" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
+					<tag xmi:id="EAID_00000EBD_857B_fd85_AEE0_43D882F41E7A" name="on" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
+					<tag xmi:id="EAID_086249AE_4F1F_d24f_AB8E_2B270F785CB8" name="start" modelElement="EAID_B5ED2C40_3748_11A8_8737_76EA90739BA9"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={8160A2AD-D770-47d0-8C44-E9611D426544}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={B5ED2C40-3748-11A8-8737-76EA90739BA9}$CLT;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Primitives"/>
 			</element>
 			<element xmi:idref="EAID_62E0C380_C021_4edb_8E48_D46BBD4C0900" xmi:type="uml:DataType" name="String" scope="public">
 				<model package="EAPK_11865AA0_5CE9_4cbd_BD49_F156817C4864" tpos="0" ea_localid="63" ea_eleType="element"/>
@@ -470,6 +486,16 @@
 					<Generalization xmi:id="EAID_C8A2BC47_190C_4892_BF02_089AA95A741B" start="EAID_7CE17C08_3EDB_4be4_9718_EA9A19F868BC" end="EAID_62E0C380_C021_4edb_8E48_D46BBD4C0900"/>
 					<Generalization xmi:id="EAID_F8DB1D85_EC67_48c0_930C_14766153A84C" start="EAID_590AB0A5_C722_4aa2_A1F5_0246962A512C" end="EAID_62E0C380_C021_4edb_8E48_D46BBD4C0900"/>
 				</links>
+			</element>
+			<element xmi:idref="EAID_49FF0B4C_F0BC_4c84_932C_C1218EF9C945" xmi:type="uml:DataType" name="Unit" scope="public">
+				<model package="EAPK_11865AA0_5CE9_4cbd_BD49_F156817C4864" tpos="0" ea_localid="77" ea_eleType="element"/>
+				<properties documentation="Represents 'no meaningful result'. For example in operations that return no value. It's the equivalent, but not the same, as the void return in Java." isSpecification="false" sType="DataType" nType="0" scope="public" stereotype="primitive" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="martin" version="1.0" phase="1.0" created="2026-04-28 08:06:07" modified="2026-04-28 08:29:13" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={99948D08-B53F-458a-89EF-C7CF6A07EE4F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=primitive;GUID={D9FA5FB6-6963-417e-9E6C-A1A04D2D9B3D};@ENDSTEREO;$DES;$CLT={49FF0B4C-F0BC-4c84-932C-C1218EF9C945}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="Primitives"/>
 			</element>
 		</elements>
 		<connectors>
@@ -690,7 +716,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8">
-					<model ea_localid="61" type="DataType" name="Number"/>
+					<model ea_localid="61" type="DataType" name="Decimal"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -724,7 +750,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_346F1E4F_0A1D_4621_B5ED_2C40374811A8">
-					<model ea_localid="61" type="DataType" name="Number"/>
+					<model ea_localid="61" type="DataType" name="Decimal"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -786,6 +812,1620 @@
 				</packagedElement>
 				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_minimum" name="A_DataType_minimum" memberEnd="extension_minimum minimum-base_DataType">
 					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_minimum" name="extension_minimum" type="minimum" isComposite="true" lower="0" upper="1" memberEnd="extension_minimum minimum-base_DataType"/>
+				</packagedElement>
+			</uml:Profile>
+			<uml:Profile xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmi:id="F2DCEB67-4" nsPrefix="MARTE" name="MARTE" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="F2DCEB67-4">
+					<body>MARTE Version:1.0</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="FlowPort" name="FlowPort">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FlowPort-base_Port" name="base_Port" association="Port_FlowPort">
+						<type href="http://schema.omg.org/spec/UML/2.1/Port"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FlowPort-direction" name="direction">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FlowPort-isAtomic" name="isAtomic">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Port_FlowPort" name="A_Port_FlowPort" memberEnd="extension_FlowPort FlowPort-base_Port">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_FlowPort" name="extension_FlowPort" type="FlowPort" isComposite="true" lower="0" upper="1" memberEnd="extension_FlowPort FlowPort-base_Port"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwEndPoint" name="HwEndPoint">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwEndPoint_HwCommunicationResource_generalization" general="HwCommunicationResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwEndPoint_CommunicationEndPoint_generalization" general="CommunicationEndPoint"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwTimer" name="HwTimer">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwTimer_HwTimingResource_generalization" general="HwTimingResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwTimer-counterWidth" name="counterWidth">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwTimer-inputClock" name="inputClock">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="AllocateActivityGroup" name="AllocateActivityGroup">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="AllocateActivityGroup-base_ActivityPartition" name="base_ActivityPartition" association="ActivityPartition_AllocateActivityGroup">
+						<type href="http://schema.omg.org/spec/UML/2.1/ActivityPartition"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="AllocateActivityGroup-isUnique" name="isUnique">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="ActivityPartition_AllocateActivityGroup" name="A_ActivityPartition_AllocateActivityGroup" memberEnd="extension_AllocateActivityGroup AllocateActivityGroup-base_ActivityPartition">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_AllocateActivityGroup" name="extension_AllocateActivityGroup" type="AllocateActivityGroup" isComposite="true" lower="0" upper="1" memberEnd="extension_AllocateActivityGroup AllocateActivityGroup-base_ActivityPartition"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwConcurrentResource" name="SwConcurrentResource" isAbstract="true">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwConcurrentResource_SwResource_generalization" general="SwResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwConcurrentResource-activationCapacity" name="activationCapacity">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwCache" name="HwCache">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwCache_HwMemory_generalization" general="HwMemory"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwCache-type" name="type">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwCache-repl_Policy" name="repl_Policy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwCache-writePolicy" name="writePolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="PpUnit" name="PpUnit">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PpUnit-base_BehavioredClassifier" name="base_BehavioredClassifier" association="BehavioredClassifier_PpUnit">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioredClassifier"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PpUnit-memorySize" name="memorySize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PpUnit-concPolicy" name="concPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioredClassifier_PpUnit" name="A_BehavioredClassifier_PpUnit" memberEnd="extension_PpUnit PpUnit-base_BehavioredClassifier">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_PpUnit" name="extension_PpUnit" type="PpUnit" isComposite="true" lower="0" upper="1" memberEnd="extension_PpUnit PpUnit-base_BehavioredClassifier"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ConcurrencyResource" name="ConcurrencyResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="ConcurrencyResource_Resource_generalization" general="Resource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="MutualExclusionResource" name="MutualExclusionResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="MutualExclusionResource_Resource_generalization" general="Resource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MutualExclusionResource-scheduler" name="scheduler">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MutualExclusionResource-isProtected" name="isProtected">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MutualExclusionResource-otherProtectProtocol" name="otherProtectProtocol">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MutualExclusionResource-ceiling" name="ceiling">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MutualExclusionResource-protectKind" name="protectKind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="DeviceBroker" name="DeviceBroker">
+					<generalization xmi:type="uml:Generalization" xmi:id="DeviceBroker_SwResource_generalization" general="SwResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DeviceBroker-isBuffered" name="isBuffered">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DeviceBroker-accessPolicy" name="accessPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ClockResource" name="ClockResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="ClockResource_TimingResource_generalization" general="TimingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwComponent" name="HwComponent">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwComponent_HwResource_generalization" general="HwResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwComponent-poweredServices" name="poweredServices">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwComponent-staticDissipation" name="staticDissipation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwComponent-staticConsumption" name="staticConsumption">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwComponent-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaAcqStep" name="GaAcqStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaAcqStep_GaStep_generalization" general="GaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaAcqStep-resUnits" name="resUnits">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwMutualExclusionResource" name="SwMutualExclusionResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwMutualExclusionResource_MutualExclusionResource_generalization" general="MutualExclusionResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="SwMutualExclusionResource_SwSynchronizationResource_generalization" general="SwSynchronizationResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwMutualExclusionResource-concurrentAccessProtocol" name="concurrentAccessProtocol">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwMutualExclusionResource-mechanism" name="mechanism">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="PaRequestedService" name="PaRequestedService">
+					<generalization xmi:type="uml:Generalization" xmi:id="PaRequestedService_PaStep_generalization" general="PaStep"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="PaRequestedService_GaRequestedService_generalization" general="GaRequestedService"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ResourceUsage" name="ResourceUsage">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-base_NamedElement" name="base_NamedElement" association="NamedElement_ResourceUsage">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-powerPeak" name="powerPeak">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-allocatedMemory" name="allocatedMemory">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-usedResource" name="usedResource">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-execTime" name="execTime">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-msgSize" name="msgSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-usedMemory" name="usedMemory">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ResourceUsage-energy" name="energy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_ResourceUsage" name="A_NamedElement_ResourceUsage" memberEnd="extension_ResourceUsage ResourceUsage-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ResourceUsage" name="extension_ResourceUsage" type="ResourceUsage" isComposite="true" lower="0" upper="1" memberEnd="extension_ResourceUsage ResourceUsage-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwDevice" name="HwDevice">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwDevice_HwResource_generalization" general="HwResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwDevice_DeviceResource_generalization" general="DeviceResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="PaResPassStep" name="PaResPassStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="PaResPassStep_GaStep_generalization" general="GaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaResPassStep-resUnits" name="resUnits">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="PaCommStep" name="PaCommStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="PaCommStep_GaCommStep_generalization" general="GaCommStep"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="PaCommStep_PaStep_generalization" general="PaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaCommStep-msgSize" name="msgSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwTimerResource" name="SwTimerResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwTimerResource_TimerResource_generalization" general="TimerResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="InterruptResource" name="InterruptResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="InterruptResource_SwConcurrentResource_generalization" general="SwConcurrentResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="InterruptResource-base_Class" name="base_Class" association="Class_InterruptResource">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="InterruptResource-isMaskable" name="isMaskable">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="InterruptResource-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_InterruptResource" name="A_Class_InterruptResource" memberEnd="extension_InterruptResource InterruptResource-base_Class">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_InterruptResource" name="extension_InterruptResource" type="InterruptResource" isComposite="true" lower="0" upper="1" memberEnd="extension_InterruptResource InterruptResource-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ComputingResource" name="ComputingResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="ComputingResource_ProcessingResource_generalization" general="ProcessingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Allocated" name="Allocated">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Allocated-base_NamedElement" name="base_NamedElement" association="NamedElement_Allocated">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Allocated-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_Allocated" name="A_NamedElement_Allocated" memberEnd="extension_Allocated Allocated-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Allocated" name="extension_Allocated" type="Allocated" isComposite="true" lower="0" upper="1" memberEnd="extension_Allocated Allocated-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwMMU" name="HwMMU">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwMMU_HwStorageManager_generalization" general="HwStorageManager"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwMMU-physicalAddrSpace" name="physicalAddrSpace">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwMMU-virtualAddrSpace" name="virtualAddrSpace">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwMMU-memoryProtection" name="memoryProtection">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaWorkloadBehavior" name="GaWorkloadBehavior">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaWorkloadBehavior-base_NamedElement" name="base_NamedElement" association="NamedElement_GaWorkloadBehavior">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_GaWorkloadBehavior" name="A_NamedElement_GaWorkloadBehavior" memberEnd="extension_GaWorkloadBehavior GaWorkloadBehavior-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaWorkloadBehavior" name="extension_GaWorkloadBehavior" type="GaWorkloadBehavior" isComposite="true" lower="0" upper="1" memberEnd="extension_GaWorkloadBehavior GaWorkloadBehavior-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwI/O" name="HwI/O">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwI/O_HwDevice_generalization" general="HwDevice"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaWorkloadGenerator" name="GaWorkloadGenerator">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaWorkloadGenerator-base_Activity" name="base_Activity" association="Activity_GaWorkloadGenerator">
+						<type href="http://schema.omg.org/spec/UML/2.1/Activity"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaWorkloadGenerator-base_Behavior" name="base_Behavior" association="Behavior_GaWorkloadGenerator">
+						<type href="http://schema.omg.org/spec/UML/2.1/Behavior"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaWorkloadGenerator-base_StateMachine" name="base_StateMachine" association="StateMachine_GaWorkloadGenerator">
+						<type href="http://schema.omg.org/spec/UML/2.1/StateMachine"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaWorkloadGenerator-pop" name="pop">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Activity_GaWorkloadGenerator" name="A_Activity_GaWorkloadGenerator" memberEnd="extension_GaWorkloadGenerator GaWorkloadGenerator-base_Activity">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaWorkloadGenerator" name="extension_GaWorkloadGenerator" type="GaWorkloadGenerator" isComposite="true" lower="0" upper="1" memberEnd="extension_GaWorkloadGenerator GaWorkloadGenerator-base_Activity"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Behavior_GaWorkloadGenerator" name="A_Behavior_GaWorkloadGenerator" memberEnd="extension_GaWorkloadGenerator GaWorkloadGenerator-base_Behavior">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaWorkloadGenerator" name="extension_GaWorkloadGenerator" type="GaWorkloadGenerator" isComposite="true" lower="0" upper="1" memberEnd="extension_GaWorkloadGenerator GaWorkloadGenerator-base_Behavior"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="StateMachine_GaWorkloadGenerator" name="A_StateMachine_GaWorkloadGenerator" memberEnd="extension_GaWorkloadGenerator GaWorkloadGenerator-base_StateMachine">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaWorkloadGenerator" name="extension_GaWorkloadGenerator" type="GaWorkloadGenerator" isComposite="true" lower="0" upper="1" memberEnd="extension_GaWorkloadGenerator GaWorkloadGenerator-base_StateMachine"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="CommunicationEndPoint" name="CommunicationEndPoint">
+					<generalization xmi:type="uml:Generalization" xmi:id="CommunicationEndPoint_Resource_generalization" general="Resource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CommunicationEndPoint-packetSize" name="packetSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaStep" name="GaStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaStep_GaScenario_generalization" general="GaScenario"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaStep-selfDelay" name="selfDelay">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaStep-prob" name="prob">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaStep-isAtomic" name="isAtomic">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaStep-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaStep-rep" name="rep">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaStep-blockT" name="blockT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ClientServerPort" name="ClientServerPort">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClientServerPort-base_Port" name="base_Port" association="Port_ClientServerPort">
+						<type href="http://schema.omg.org/spec/UML/2.1/Port"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClientServerPort-specificationKind" name="specificationKind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClientServerPort-featuresSpec" name="featuresSpec">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClientServerPort-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Port_ClientServerPort" name="A_Port_ClientServerPort" memberEnd="extension_ClientServerPort ClientServerPort-base_Port">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ClientServerPort" name="extension_ClientServerPort" type="ClientServerPort" isComposite="true" lower="0" upper="1" memberEnd="extension_ClientServerPort ClientServerPort-base_Port"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaAnalysisContext" name="GaAnalysisContext">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaAnalysisContext_Configuration_generalization" general="Configuration"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="GaAnalysisContext_ExpressionContext_generalization" general="ExpressionContext"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaRelStep" name="GaRelStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaRelStep_GaStep_generalization" general="GaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaRelStep-resUnits" name="resUnits">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaCommStep" name="SaCommStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="SaCommStep_GaCommStep_generalization" general="GaCommStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaCommStep-base_BehavioralFeature" name="base_BehavioralFeature" association="BehavioralFeature_SaCommStep">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioralFeature"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaCommStep-spareCap" name="spareCap">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaCommStep-schSlack" name="schSlack">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaCommStep-deadline" name="deadline">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioralFeature_SaCommStep" name="A_BehavioralFeature_SaCommStep" memberEnd="extension_SaCommStep SaCommStep-base_BehavioralFeature">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_SaCommStep" name="extension_SaCommStep" type="SaCommStep" isComposite="true" lower="0" upper="1" memberEnd="extension_SaCommStep SaCommStep-base_BehavioralFeature"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwResourceService" name="HwResourceService">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwResourceService_GrService_generalization" general="GrService"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwCommunicationResource" name="SwCommunicationResource" isAbstract="true">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwCommunicationResource_SwInteractionResource_generalization" general="SwInteractionResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="SwCommunicationResource_CommunicationMedia_generalization" general="CommunicationMedia"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwRouter" name="HwRouter">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwRouter_HwMedia_generalization" general="HwMedia"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRouter-switchingType" name="switchingType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRouter-fifoSize" name="fifoSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRouter-isSynchronous" name="isSynchronous">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRouter-fifoLocation" name="fifoLocation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRouter-isRoutingAdaptive" name="isRoutingAdaptive">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GCMInvocatingBehavior" name="GCMInvocatingBehavior">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GCMInvocatingBehavior-base_Activity" name="base_Activity" association="Activity_GCMInvocatingBehavior">
+						<type href="http://schema.omg.org/spec/UML/2.1/Activity"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GCMInvocatingBehavior-base_Behavior" name="base_Behavior" association="Behavior_GCMInvocatingBehavior">
+						<type href="http://schema.omg.org/spec/UML/2.1/Behavior"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GCMInvocatingBehavior-base_StateMachine" name="base_StateMachine" association="StateMachine_GCMInvocatingBehavior">
+						<type href="http://schema.omg.org/spec/UML/2.1/StateMachine"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Activity_GCMInvocatingBehavior" name="A_Activity_GCMInvocatingBehavior" memberEnd="extension_GCMInvocatingBehavior GCMInvocatingBehavior-base_Activity">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GCMInvocatingBehavior" name="extension_GCMInvocatingBehavior" type="GCMInvocatingBehavior" isComposite="true" lower="0" upper="1" memberEnd="extension_GCMInvocatingBehavior GCMInvocatingBehavior-base_Activity"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Behavior_GCMInvocatingBehavior" name="A_Behavior_GCMInvocatingBehavior" memberEnd="extension_GCMInvocatingBehavior GCMInvocatingBehavior-base_Behavior">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GCMInvocatingBehavior" name="extension_GCMInvocatingBehavior" type="GCMInvocatingBehavior" isComposite="true" lower="0" upper="1" memberEnd="extension_GCMInvocatingBehavior GCMInvocatingBehavior-base_Behavior"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="StateMachine_GCMInvocatingBehavior" name="A_StateMachine_GCMInvocatingBehavior" memberEnd="extension_GCMInvocatingBehavior GCMInvocatingBehavior-base_StateMachine">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GCMInvocatingBehavior" name="extension_GCMInvocatingBehavior" type="GCMInvocatingBehavior" isComposite="true" lower="0" upper="1" memberEnd="extension_GCMInvocatingBehavior GCMInvocatingBehavior-base_StateMachine"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaCommStep" name="GaCommStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaCommStep_GaStep_generalization" general="GaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaCommStep-msgSize" name="msgSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Scheduler" name="Scheduler">
+					<generalization xmi:type="uml:Generalization" xmi:id="Scheduler_Resource_generalization" general="Resource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Scheduler-otherSchedPolicy" name="otherSchedPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Scheduler-schedPolicy" name="schedPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Scheduler-host" name="host">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Scheduler-isPreemptible" name="isPreemptible">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwRAM" name="HwRAM">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwRAM_HwMemory_generalization" general="HwMemory"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRAM-isNonVolatile" name="isNonVolatile">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRAM-isStatic" name="isStatic">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRAM-repl_Policy" name="repl_Policy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRAM-isSynchronous" name="isSynchronous">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwRAM-writePolicy" name="writePolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="DeviceResource" name="DeviceResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="DeviceResource_ProcessingResource_generalization" general="ProcessingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="RtSpecification" name="RtSpecification">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-base_Note" name="base_Note" association="Note_RtSpecification">
+						<type href="http://schema.omg.org/spec/UML/2.1/Note"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-boundDI" name="boundDI">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-miss" name="miss">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-relDI" name="relDI">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-absDI" name="absDI">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-priority" name="priority">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-rdTime" name="rdTime">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-tRef" name="tRef">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-occKind" name="occKind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtSpecification-utility" name="utility">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Note_RtSpecification" name="A_Note_RtSpecification" memberEnd="extension_RtSpecification RtSpecification-base_Note">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtSpecification" name="extension_RtSpecification" type="RtSpecification" isComposite="true" lower="0" upper="1" memberEnd="extension_RtSpecification RtSpecification-base_Note"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaCommHost" name="SaCommHost">
+					<generalization xmi:type="uml:Generalization" xmi:id="SaCommHost_GaCommHost_generalization" general="GaCommHost"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaCommHost-isSched" name="isSched">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaCommHost-schSlack" name="schSlack">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ProcessingResource" name="ProcessingResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="ProcessingResource_Resource_generalization" general="Resource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ProcessingResource-speedFactor" name="speedFactor">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ProcessingResource-mainScheduler" name="mainScheduler">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwPowerSupply" name="HwPowerSupply">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwPowerSupply_HwComponent_generalization" general="HwComponent"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwPowerSupply-capacity" name="capacity">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwPowerSupply-suppliedPower" name="suppliedPower">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Release" name="Release">
+					<generalization xmi:type="uml:Generalization" xmi:id="Release_GrService_generalization" general="GrService"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwResource" name="SwResource" isAbstract="true">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwResource_Resource_generalization" general="Resource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ClockConstraint" name="ClockConstraint">
+					<generalization xmi:type="uml:Generalization" xmi:id="ClockConstraint_TimedElement_generalization" general="TimedElement"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="ClockConstraint_NfpConstraint_generalization" general="NfpConstraint"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockConstraint-base_Constraint" name="base_Constraint" association="Constraint_ClockConstraint">
+						<type href="http://schema.omg.org/spec/UML/2.1/Constraint"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockConstraint-isSynchronous" name="isSynchronous">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockConstraint-isPhysical" name="isPhysical">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockConstraint-isCausal" name="isCausal">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Constraint_ClockConstraint" name="A_Constraint_ClockConstraint" memberEnd="extension_ClockConstraint ClockConstraint-base_Constraint">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ClockConstraint" name="extension_ClockConstraint" type="ClockConstraint" isComposite="true" lower="0" upper="1" memberEnd="extension_ClockConstraint ClockConstraint-base_Constraint"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwPLD" name="HwPLD">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwPLD_HwComputingResource_generalization" general="HwComputingResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwPLD-technology" name="technology">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwAccessService" name="SwAccessService">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwAccessService_GrService_generalization" general="GrService"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwAccessService-isModifier" name="isModifier">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaWorkloadEvent" name="GaWorkloadEvent">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaWorkloadEvent-base_NamedElement" name="base_NamedElement" association="NamedElement_GaWorkloadEvent">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_GaWorkloadEvent" name="A_NamedElement_GaWorkloadEvent" memberEnd="extension_GaWorkloadEvent GaWorkloadEvent-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaWorkloadEvent" name="extension_GaWorkloadEvent" type="GaWorkloadEvent" isComposite="true" lower="0" upper="1" memberEnd="extension_GaWorkloadEvent GaWorkloadEvent-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwCoolingSupply" name="HwCoolingSupply">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwCoolingSupply_HwComponent_generalization" general="HwComponent"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwCoolingSupply-coolingPower" name="coolingPower">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Mode" name="Mode">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Mode-base_State" name="base_State" association="State_Mode">
+						<type href="http://schema.omg.org/spec/UML/2.1/State"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="State_Mode" name="A_State_Mode" memberEnd="extension_Mode Mode-base_State">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Mode" name="extension_Mode" type="Mode" isComposite="true" lower="0" upper="1" memberEnd="extension_Mode Mode-base_State"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwStorageManager" name="HwStorageManager">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwStorageManager_HwResource_generalization" general="HwResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwStorageManager_StorageResource_generalization" general="StorageResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwROM" name="HwROM">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwROM_HwMemory_generalization" general="HwMemory"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwROM-type" name="type">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="EntryPoint" name="EntryPoint">
+					<generalization xmi:type="uml:Generalization" xmi:id="EntryPoint_Allocate_generalization" general="Allocate"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EntryPoint-isReentrant" name="isReentrant">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EntryPoint-routine" name="routine">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TupleType" name="TupleType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TupleType-base_DataType" name="base_DataType" association="DataType_TupleType">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_TupleType" name="A_DataType_TupleType" memberEnd="extension_TupleType TupleType-base_DataType">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_TupleType" name="extension_TupleType" type="TupleType" isComposite="true" lower="0" upper="1" memberEnd="extension_TupleType TupleType-base_DataType"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ModeBehavior" name="ModeBehavior">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ModeBehavior-base_StateMachine" name="base_StateMachine" association="StateMachine_ModeBehavior">
+						<type href="http://schema.omg.org/spec/UML/2.1/StateMachine"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="StateMachine_ModeBehavior" name="A_StateMachine_ModeBehavior" memberEnd="extension_ModeBehavior ModeBehavior-base_StateMachine">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ModeBehavior" name="extension_ModeBehavior" type="ModeBehavior" isComposite="true" lower="0" upper="1" memberEnd="extension_ModeBehavior ModeBehavior-base_StateMachine"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwCommunicationResource" name="HwCommunicationResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwCommunicationResource_HwResource_generalization" general="HwResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaLatencyObs" name="GaLatencyObs">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaLatencyObs_GaTimedObs_generalization" general="GaTimedObs"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaLatencyObs-latency" name="latency">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaLatencyObs-maxJitter" name="maxJitter">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaCommChannel" name="GaCommChannel">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaCommChannel_SchedulableResource_generalization" general="SchedulableResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaCommChannel-utilization" name="utilization">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaCommChannel-packetSize" name="packetSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaTimedObs" name="GaTimedObs">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaTimedObs_NfpConstraint_generalization" general="NfpConstraint"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaTimedObs-laxity" name="laxity">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaExecHost" name="GaExecHost">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaExecHost_ComputingResource_generalization" general="ComputingResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="GaExecHost_Scheduler_generalization" general="Scheduler"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaExecHost-commTxOvh" name="commTxOvh">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaExecHost-clockOvh" name="clockOvh">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaExecHost-cntxtSwT" name="cntxtSwT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaExecHost-throughput" name="throughput">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaExecHost-memSize" name="memSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaExecHost-commRcvOvh" name="commRcvOvh">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ClockType" name="ClockType">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-base_Class" name="base_Class" association="Class_ClockType">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-isLogical" name="isLogical">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-maxValAttr" name="maxValAttr">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-nature" name="nature">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-unitType" name="unitType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-setTime" name="setTime">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-getTime" name="getTime">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-indexToValue" name="indexToValue">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-offsetAttr" name="offsetAttr">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClockType-resolAttr" name="resolAttr">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_ClockType" name="A_Class_ClockType" memberEnd="extension_ClockType ClockType-base_Class">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ClockType" name="extension_ClockType" type="ClockType" isComposite="true" lower="0" upper="1" memberEnd="extension_ClockType ClockType-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Dimension" name="Dimension">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Dimension-base_Enumeration" name="base_Enumeration" association="Enumeration_Dimension">
+						<type href="http://schema.omg.org/spec/UML/2.1/Enumeration"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Dimension-symbol" name="symbol">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Dimension-baseExponent" name="baseExponent">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Dimension-baseDimension" name="baseDimension">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Enumeration_Dimension" name="A_Enumeration_Dimension" memberEnd="extension_Dimension Dimension-base_Enumeration">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Dimension" name="extension_Dimension" type="Dimension" isComposite="true" lower="0" upper="1" memberEnd="extension_Dimension Dimension-base_Enumeration"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SchedulableResource" name="SchedulableResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="SchedulableResource_ConcurrencyResource_generalization" general="ConcurrencyResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SchedulableResource-dependentScheduler" name="dependentScheduler">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SchedulableResource-hostScheduler" name="hostScheduler">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SchedulableResource-isActive" name="isActive">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwDrive" name="HwDrive">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwDrive_HwMemory_generalization" general="HwMemory"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwDrive-sectorSize" name="sectorSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaSharedResource" name="SaSharedResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="SaSharedResource_MutualExclusionResource_generalization" general="MutualExclusionResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSharedResource-acquisiT" name="acquisiT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSharedResource-capacity" name="capacity">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSharedResource-isPreemp" name="isPreemp">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSharedResource-releaseT" name="releaseT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSharedResource-isConsum" name="isConsum">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaScenario" name="GaScenario">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaScenario_TimedProcessing_generalization" general="TimedProcessing"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="GaScenario_ResourceUsage_generalization" general="ResourceUsage"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaScenario-respT" name="respT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaScenario-throughput" name="throughput">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaScenario-interOccT" name="interOccT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaScenario-hostDemand" name="hostDemand">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Acquire" name="Acquire">
+					<generalization xmi:type="uml:Generalization" xmi:id="Acquire_GrService_generalization" general="GrService"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Acquire-isBlocking" name="isBlocking">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GCMInvocationAction" name="GCMInvocationAction">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GCMInvocationAction-base_Action" name="base_Action" association="Action_GCMInvocationAction">
+						<type href="http://schema.omg.org/spec/UML/2.1/Action"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Action_GCMInvocationAction" name="A_Action_GCMInvocationAction" memberEnd="extension_GCMInvocationAction GCMInvocationAction-base_Action">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GCMInvocationAction" name="extension_GCMInvocationAction" type="GCMInvocationAction" isComposite="true" lower="0" upper="1" memberEnd="extension_GCMInvocationAction GCMInvocationAction-base_Action"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="PaStep" name="PaStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="PaStep_GaStep_generalization" general="GaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaStep-noSync" name="noSync">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="StorageResource" name="StorageResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="StorageResource_Resource_generalization" general="Resource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="StorageResource-elementSize" name="elementSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ClientServerSpecification" name="ClientServerSpecification">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClientServerSpecification-base_Interface" name="base_Interface" association="Interface_ClientServerSpecification">
+						<type href="http://schema.omg.org/spec/UML/2.1/Interface"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Interface_ClientServerSpecification" name="A_Interface_ClientServerSpecification" memberEnd="extension_ClientServerSpecification ClientServerSpecification-base_Interface">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ClientServerSpecification" name="extension_ClientServerSpecification" type="ClientServerSpecification" isComposite="true" lower="0" upper="1" memberEnd="extension_ClientServerSpecification ClientServerSpecification-base_Interface"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Unit" name="Unit">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Unit-base_Attribute" name="base_Attribute" association="Attribute_Unit">
+						<type href="http://schema.omg.org/spec/UML/2.1/Attribute"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Unit-baseUnit" name="baseUnit">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Unit-convFactor" name="convFactor">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Unit-convOffset" name="convOffset">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Attribute_Unit" name="A_Attribute_Unit" memberEnd="extension_Unit Unit-base_Attribute">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Unit" name="extension_Unit" type="Unit" isComposite="true" lower="0" upper="1" memberEnd="extension_Unit Unit-base_Attribute"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="NotificationResource" name="NotificationResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="NotificationResource_SwSynchronizationResource_generalization" general="SwSynchronizationResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NotificationResource-occurrence" name="occurrence">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NotificationResource-mechanism" name="mechanism">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="MessageCommResource" name="MessageCommResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="MessageCommResource_SwCommunicationResource_generalization" general="SwCommunicationResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MessageCommResource-base_Class" name="base_Class" association="Class_MessageCommResource">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MessageCommResource-isFixedMessageSize" name="isFixedMessageSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MessageCommResource-messageQueuePolicy" name="messageQueuePolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MessageCommResource-mechanism" name="mechanism">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_MessageCommResource" name="A_Class_MessageCommResource" memberEnd="extension_MessageCommResource MessageCommResource-base_Class">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_MessageCommResource" name="extension_MessageCommResource" type="MessageCommResource" isComposite="true" lower="0" upper="1" memberEnd="extension_MessageCommResource MessageCommResource-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwResource" name="HwResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwResource_Resource_generalization" general="Resource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwResource-frequency" name="frequency">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwResource-description" name="description">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="FlowSpecification" name="FlowSpecification">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FlowSpecification-base_Interface" name="base_Interface" association="Interface_FlowSpecification">
+						<type href="http://schema.omg.org/spec/UML/2.1/Interface"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Interface_FlowSpecification" name="A_Interface_FlowSpecification" memberEnd="extension_FlowSpecification FlowSpecification-base_Interface">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_FlowSpecification" name="extension_FlowSpecification" type="FlowSpecification" isComposite="true" lower="0" upper="1" memberEnd="extension_FlowSpecification FlowSpecification-base_Interface"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwInteractionResource" name="SwInteractionResource" isAbstract="true">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwInteractionResource_SwResource_generalization" general="SwResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwInteractionResource-waitingQueueCapacity" name="waitingQueueCapacity">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwInteractionResource-isIntraMemoryPartitionInteraction" name="isIntraMemoryPartitionInteraction">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwInteractionResource-waitingQueuePolicy" name="waitingQueuePolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GCMTrigger" name="GCMTrigger">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GCMTrigger-base_Trigger" name="base_Trigger" association="Trigger_GCMTrigger">
+						<type href="http://schema.omg.org/spec/UML/2.1/Trigger"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Trigger_GCMTrigger" name="A_Trigger_GCMTrigger" memberEnd="extension_GCMTrigger GCMTrigger-base_Trigger">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GCMTrigger" name="extension_GCMTrigger" type="GCMTrigger" isComposite="true" lower="0" upper="1" memberEnd="extension_GCMTrigger GCMTrigger-base_Trigger"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="NfpConstraint" name="NfpConstraint">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NfpConstraint-base_Constraint" name="base_Constraint" association="Constraint_NfpConstraint">
+						<type href="http://schema.omg.org/spec/UML/2.1/Constraint"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NfpConstraint-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Constraint_NfpConstraint" name="A_Constraint_NfpConstraint" memberEnd="extension_NfpConstraint NfpConstraint-base_Constraint">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_NfpConstraint" name="extension_NfpConstraint" type="NfpConstraint" isComposite="true" lower="0" upper="1" memberEnd="extension_NfpConstraint NfpConstraint-base_Constraint"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="CommunicationMedia" name="CommunicationMedia">
+					<generalization xmi:type="uml:Generalization" xmi:id="CommunicationMedia_ProcessingResource_generalization" general="ProcessingResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CommunicationMedia-base_Connector" name="base_Connector" association="Connector_CommunicationMedia">
+						<type href="http://schema.omg.org/spec/UML/2.1/Connector"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CommunicationMedia-elementSize" name="elementSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CommunicationMedia-packetT" name="packetT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="CommunicationMedia-blockT" name="blockT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Connector_CommunicationMedia" name="A_Connector_CommunicationMedia" memberEnd="extension_CommunicationMedia CommunicationMedia-base_Connector">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_CommunicationMedia" name="extension_CommunicationMedia" type="CommunicationMedia" isComposite="true" lower="0" upper="1" memberEnd="extension_CommunicationMedia CommunicationMedia-base_Connector"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="MemoryBroker" name="MemoryBroker">
+					<generalization xmi:type="uml:Generalization" xmi:id="MemoryBroker_SwResource_generalization" general="SwResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MemoryBroker-accessPolicy" name="accessPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Resource" name="Resource">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-base_Class" name="base_Class" association="Class_Resource">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-base_Object" name="base_Object" association="Object_Resource">
+						<type href="http://schema.omg.org/spec/UML/2.1/Object"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-base_Node" name="base_Node" association="Node_Resource">
+						<type href="http://schema.omg.org/spec/UML/2.1/Node"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-base_Component" name="base_Component" association="Component_Resource">
+						<type href="http://schema.omg.org/spec/UML/2.1/Component"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-base_Part" name="base_Part" association="Part_Resource">
+						<type href="http://schema.omg.org/spec/UML/2.1/Part"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-isProtected" name="isProtected">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-resMult" name="resMult">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Resource-isActive" name="isActive">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Resource" name="A_Class_Resource" memberEnd="extension_Resource Resource-base_Class">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Resource" name="extension_Resource" type="Resource" isComposite="true" lower="0" upper="1" memberEnd="extension_Resource Resource-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Object_Resource" name="A_Object_Resource" memberEnd="extension_Resource Resource-base_Object">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Resource" name="extension_Resource" type="Resource" isComposite="true" lower="0" upper="1" memberEnd="extension_Resource Resource-base_Object"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Node_Resource" name="A_Node_Resource" memberEnd="extension_Resource Resource-base_Node">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Resource" name="extension_Resource" type="Resource" isComposite="true" lower="0" upper="1" memberEnd="extension_Resource Resource-base_Node"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Component_Resource" name="A_Component_Resource" memberEnd="extension_Resource Resource-base_Component">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Resource" name="extension_Resource" type="Resource" isComposite="true" lower="0" upper="1" memberEnd="extension_Resource Resource-base_Component"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Part_Resource" name="A_Part_Resource" memberEnd="extension_Resource Resource-base_Part">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Resource" name="extension_Resource" type="Resource" isComposite="true" lower="0" upper="1" memberEnd="extension_Resource Resource-base_Part"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TimedEvent" name="TimedEvent">
+					<generalization xmi:type="uml:Generalization" xmi:id="TimedEvent_TimedElement_generalization" general="TimedElement"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedEvent-base_Event" name="base_Event" association="Event_TimedEvent">
+						<type href="http://schema.omg.org/spec/UML/2.1/Event"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedEvent-every" name="every">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedEvent-repetition" name="repetition">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Event_TimedEvent" name="A_Event_TimedEvent" memberEnd="extension_TimedEvent TimedEvent-base_Event">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_TimedEvent" name="extension_TimedEvent" type="TimedEvent" isComposite="true" lower="0" upper="1" memberEnd="extension_TimedEvent TimedEvent-base_Event"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TimedConstraint" name="TimedConstraint">
+					<generalization xmi:type="uml:Generalization" xmi:id="TimedConstraint_TimedElement_generalization" general="TimedElement"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="TimedConstraint_NfpConstraint_generalization" general="NfpConstraint"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedConstraint-base_Constraint" name="base_Constraint" association="Constraint_TimedConstraint">
+						<type href="http://schema.omg.org/spec/UML/2.1/Constraint"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedConstraint-interpretation" name="interpretation">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Constraint_TimedConstraint" name="A_Constraint_TimedConstraint" memberEnd="extension_TimedConstraint TimedConstraint-base_Constraint">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_TimedConstraint" name="extension_TimedConstraint" type="TimedConstraint" isComposite="true" lower="0" upper="1" memberEnd="extension_TimedConstraint TimedConstraint-base_Constraint"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="FlowProperty" name="FlowProperty">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FlowProperty-base_Property" name="base_Property" association="Property_FlowProperty">
+						<type href="http://schema.omg.org/spec/UML/2.1/Property"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="FlowProperty-direction" name="direction">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Property_FlowProperty" name="A_Property_FlowProperty" memberEnd="extension_FlowProperty FlowProperty-base_Property">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_FlowProperty" name="extension_FlowProperty" type="FlowProperty" isComposite="true" lower="0" upper="1" memberEnd="extension_FlowProperty FlowProperty-base_Property"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="NfpRefine" name="NfpRefine">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NfpRefine-base_Dependency" name="base_Dependency" association="Dependency_NfpRefine">
+						<type href="http://schema.omg.org/spec/UML/2.1/Dependency"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Dependency_NfpRefine" name="A_Dependency_NfpRefine" memberEnd="extension_NfpRefine NfpRefine-base_Dependency">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_NfpRefine" name="extension_NfpRefine" type="NfpRefine" isComposite="true" lower="0" upper="1" memberEnd="extension_NfpRefine NfpRefine-base_Dependency"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Allocate" name="Allocate">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Allocate-base_Abstraction" name="base_Abstraction" association="Abstraction_Allocate">
+						<type href="http://schema.omg.org/spec/UML/2.1/Abstraction"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Allocate-nature" name="nature">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Allocate-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Abstraction_Allocate" name="A_Abstraction_Allocate" memberEnd="extension_Allocate Allocate-base_Abstraction">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Allocate" name="extension_Allocate" type="Allocate" isComposite="true" lower="0" upper="1" memberEnd="extension_Allocate Allocate-base_Abstraction"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwISA" name="HwISA">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwISA_HwResource_generalization" general="HwResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwISA-family" name="family">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwISA-inst_Width" name="inst_Width">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwISA-type" name="type">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Clock" name="Clock">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Clock-base_Object" name="base_Object" association="Object_Clock">
+						<type href="http://schema.omg.org/spec/UML/2.1/Object"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Clock-base_Property" name="base_Property" association="Property_Clock">
+						<type href="http://schema.omg.org/spec/UML/2.1/Property"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Clock-base_Event" name="base_Event" association="Event_Clock">
+						<type href="http://schema.omg.org/spec/UML/2.1/Event"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Clock-unit" name="unit">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Clock-standard" name="standard">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Object_Clock" name="A_Object_Clock" memberEnd="extension_Clock Clock-base_Object">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Clock" name="extension_Clock" type="Clock" isComposite="true" lower="0" upper="1" memberEnd="extension_Clock Clock-base_Object"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Property_Clock" name="A_Property_Clock" memberEnd="extension_Clock Clock-base_Property">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Clock" name="extension_Clock" type="Clock" isComposite="true" lower="0" upper="1" memberEnd="extension_Clock Clock-base_Property"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Event_Clock" name="A_Event_Clock" memberEnd="extension_Clock Clock-base_Event">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Clock" name="extension_Clock" type="Clock" isComposite="true" lower="0" upper="1" memberEnd="extension_Clock Clock-base_Event"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="MemoryPartition" name="MemoryPartition">
+					<generalization xmi:type="uml:Generalization" xmi:id="MemoryPartition_SwResource_generalization" general="SwResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="MemoryPartition-base_Namespace" name="base_Namespace" association="Namespace_MemoryPartition">
+						<type href="http://schema.omg.org/spec/UML/2.1/Namespace"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Namespace_MemoryPartition" name="A_Namespace_MemoryPartition" memberEnd="extension_MemoryPartition MemoryPartition-base_Namespace">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_MemoryPartition" name="extension_MemoryPartition" type="MemoryPartition" isComposite="true" lower="0" upper="1" memberEnd="extension_MemoryPartition MemoryPartition-base_Namespace"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="PaRunTInstance" name="PaRunTInstance">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaRunTInstance-base_NamedElement" name="base_NamedElement" association="NamedElement_PaRunTInstance">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaRunTInstance-throughput" name="throughput">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaRunTInstance-utilization" name="utilization">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaRunTInstance-unbddPool" name="unbddPool">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaRunTInstance-poolSize" name="poolSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_PaRunTInstance" name="A_NamedElement_PaRunTInstance" memberEnd="extension_PaRunTInstance PaRunTInstance-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_PaRunTInstance" name="extension_PaRunTInstance" type="PaRunTInstance" isComposite="true" lower="0" upper="1" memberEnd="extension_PaRunTInstance PaRunTInstance-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwClock" name="HwClock">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwClock_HwTimingResource_generalization" general="HwTimingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TimerResource" name="TimerResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="TimerResource_TimingResource_generalization" general="TimingResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimerResource-isPeriodic" name="isPeriodic">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimerResource-duration" name="duration">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaExecHost" name="SaExecHost">
+					<generalization xmi:type="uml:Generalization" xmi:id="SaExecHost_GaExecHost_generalization" general="GaExecHost"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaExecHost-overlaps" name="overlaps">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaExecHost-ISRswitchT" name="ISRswitchT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaExecHost-isSched" name="isSched">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaExecHost-schSlack" name="schSlack">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaExecHost-schedUtiliz" name="schedUtiliz">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaExecHost-blockT" name="blockT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwSupport" name="HwSupport">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwSupport_HwDevice_generalization" general="HwDevice"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwSchedulableResource" name="SwSchedulableResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwSchedulableResource_SchedulableResource_generalization" general="SchedulableResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="SwSchedulableResource_SwConcurrentResource_generalization" general="SwConcurrentResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwSchedulableResource-isStaticSchedulingFeature" name="isStaticSchedulingFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SwSchedulableResource-isPreemptable" name="isPreemptable">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SynchronizationResource" name="SynchronizationResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="SynchronizationResource_Resource_generalization" general="Resource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwASIC" name="HwASIC">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwASIC_HwComputingResource_generalization" general="HwComputingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Assign" name="Assign">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Assign-base_Note" name="base_Note" association="Note_Assign">
+						<type href="http://schema.omg.org/spec/UML/2.1/Note"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Assign-nature" name="nature">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Assign-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Note_Assign" name="A_Note_Assign" memberEnd="extension_Assign Assign-base_Note">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Assign" name="extension_Assign" type="Assign" isComposite="true" lower="0" upper="1" memberEnd="extension_Assign Assign-base_Note"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwMcProcessor" name="HwMcProcessor">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwMcProcessor_HwProcessor_generalization" general="HwProcessor"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwMemory" name="HwMemory">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwMemory_HwResource_generalization" general="HwResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwMemory_StorageResource_generalization" general="StorageResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwMemory-memorySize" name="memorySize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwMemory-addressSize" name="addressSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaResourcesPlatform" name="GaResourcesPlatform">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaResourcesPlatform-base_Class" name="base_Class" association="Class_GaResourcesPlatform">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_GaResourcesPlatform" name="A_Class_GaResourcesPlatform" memberEnd="extension_GaResourcesPlatform GaResourcesPlatform-base_Class">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaResourcesPlatform" name="extension_GaResourcesPlatform" type="GaResourcesPlatform" isComposite="true" lower="0" upper="1" memberEnd="extension_GaResourcesPlatform GaResourcesPlatform-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwTimingResource" name="HwTimingResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwTimingResource_HwResource_generalization" general="HwResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwTimingResource_TimingResource_generalization" general="TimingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwBus" name="HwBus">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwBus_HwMedia_generalization" general="HwMedia"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwBus-addressWidth" name="addressWidth">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwBus-isSynchronous" name="isSynchronous">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwBus-isSerial" name="isSerial">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwBus-wordWidth" name="wordWidth">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaRequestedService" name="GaRequestedService">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaRequestedService_GaStep_generalization" general="GaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaRequestedService-base_Operation" name="base_Operation" association="Operation_GaRequestedService">
+						<type href="http://schema.omg.org/spec/UML/2.1/Operation"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Operation_GaRequestedService" name="A_Operation_GaRequestedService" memberEnd="extension_GaRequestedService GaRequestedService-base_Operation">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaRequestedService" name="extension_GaRequestedService" type="GaRequestedService" isComposite="true" lower="0" upper="1" memberEnd="extension_GaRequestedService GaRequestedService-base_Operation"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="DataPool" name="DataPool">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataPool-base_Property" name="base_Property" association="Property_DataPool">
+						<type href="http://schema.omg.org/spec/UML/2.1/Property"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataPool-ordering" name="ordering">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Property_DataPool" name="A_Property_DataPool" memberEnd="extension_DataPool DataPool-base_Property">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_DataPool" name="extension_DataPool" type="DataPool" isComposite="true" lower="0" upper="1" memberEnd="extension_DataPool DataPool-base_Property"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwComputingResource" name="HwComputingResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwComputingResource_HwResource_generalization" general="HwResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwComputingResource_ComputingResource_generalization" general="ComputingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="DataEvent" name="DataEvent">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="DataEvent-base_ReceiveEvent" name="base_ReceiveEvent" association="ReceiveEvent_DataEvent">
+						<type href="http://schema.omg.org/spec/UML/2.1/ReceiveEvent"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="ReceiveEvent_DataEvent" name="A_ReceiveEvent_DataEvent" memberEnd="extension_DataEvent DataEvent-base_ReceiveEvent">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_DataEvent" name="extension_DataEvent" type="DataEvent" isComposite="true" lower="0" upper="1" memberEnd="extension_DataEvent DataEvent-base_ReceiveEvent"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwBridge" name="HwBridge">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwBridge_HwMedia_generalization" general="HwMedia"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Alarm" name="Alarm">
+					<generalization xmi:type="uml:Generalization" xmi:id="Alarm_InterruptResource_generalization" general="InterruptResource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Alarm-base_Class" name="base_Class" association="Class_Alarm">
+						<type href="http://schema.omg.org/spec/UML/2.1/Class"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Alarm-timer" name="timer">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Alarm-isWatchdog" name="isWatchdog">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Class_Alarm" name="A_Class_Alarm" memberEnd="extension_Alarm Alarm-base_Class">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Alarm" name="extension_Alarm" type="Alarm" isComposite="true" lower="0" upper="1" memberEnd="extension_Alarm Alarm-base_Class"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="RtAction" name="RtAction">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtAction-base_BehavioralFeature" name="base_BehavioralFeature" association="BehavioralFeature_RtAction">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioralFeature"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtAction-base_Action" name="base_Action" association="Action_RtAction">
+						<type href="http://schema.omg.org/spec/UML/2.1/Action"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtAction-isAtomic" name="isAtomic">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtAction-synchKind" name="synchKind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtAction-msgSize" name="msgSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioralFeature_RtAction" name="A_BehavioralFeature_RtAction" memberEnd="extension_RtAction RtAction-base_BehavioralFeature">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtAction" name="extension_RtAction" type="RtAction" isComposite="true" lower="0" upper="1" memberEnd="extension_RtAction RtAction-base_BehavioralFeature"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Action_RtAction" name="A_Action_RtAction" memberEnd="extension_RtAction RtAction-base_Action">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtAction" name="extension_RtAction" type="RtAction" isComposite="true" lower="0" upper="1" memberEnd="extension_RtAction RtAction-base_Action"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaStep" name="SaStep">
+					<generalization xmi:type="uml:Generalization" xmi:id="SaStep_GaStep_generalization" general="GaStep"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-base_BehavioralFeature" name="base_BehavioralFeature" association="BehavioralFeature_SaStep">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioralFeature"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-nonpreemptionBlocking" name="nonpreemptionBlocking">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-preempT" name="preempT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-spareCap" name="spareCap">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-numberSelfSuspensions" name="numberSelfSuspensions">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-schSlack" name="schSlack">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-deadline" name="deadline">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-selfSuspensionBlocking" name="selfSuspensionBlocking">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaStep-readyT" name="readyT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioralFeature_SaStep" name="A_BehavioralFeature_SaStep" memberEnd="extension_SaStep SaStep-base_BehavioralFeature">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_SaStep" name="extension_SaStep" type="SaStep" isComposite="true" lower="0" upper="1" memberEnd="extension_SaStep SaStep-base_BehavioralFeature"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwMedia" name="HwMedia">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwMedia_CommunicationMedia_generalization" general="CommunicationMedia"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwMedia_HwCommunicationResource_generalization" general="HwCommunicationResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaEndToEndFlow" name="SaEndToEndFlow">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaEndToEndFlow-base_NamedElement" name="base_NamedElement" association="NamedElement_SaEndToEndFlow">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaEndToEndFlow-EndToEndD" name="EndToEndD">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaEndToEndFlow-EndToEndT" name="EndToEndT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaEndToEndFlow-isSched" name="isSched">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaEndToEndFlow-schSlack" name="schSlack">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_SaEndToEndFlow" name="A_NamedElement_SaEndToEndFlow" memberEnd="extension_SaEndToEndFlow SaEndToEndFlow-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_SaEndToEndFlow" name="extension_SaEndToEndFlow" type="SaEndToEndFlow" isComposite="true" lower="0" upper="1" memberEnd="extension_SaEndToEndFlow SaEndToEndFlow-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SwSynchronizationResource" name="SwSynchronizationResource" isAbstract="true">
+					<generalization xmi:type="uml:Generalization" xmi:id="SwSynchronizationResource_SynchronizationResource_generalization" general="SynchronizationResource"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="SwSynchronizationResource_SwInteractionResource_generalization" general="SwInteractionResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Configuration" name="Configuration">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Configuration-base_StructuredClassifier" name="base_StructuredClassifier" association="StructuredClassifier_Configuration">
+						<type href="http://schema.omg.org/spec/UML/2.1/StructuredClassifier"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Configuration-base_Package" name="base_Package" association="Package_Configuration">
+						<type href="http://schema.omg.org/spec/UML/2.1/Package"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Configuration-mode" name="mode">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="StructuredClassifier_Configuration" name="A_StructuredClassifier_Configuration" memberEnd="extension_Configuration Configuration-base_StructuredClassifier">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Configuration" name="extension_Configuration" type="Configuration" isComposite="true" lower="0" upper="1" memberEnd="extension_Configuration Configuration-base_StructuredClassifier"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Package_Configuration" name="A_Package_Configuration" memberEnd="extension_Configuration Configuration-base_Package">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Configuration" name="extension_Configuration" type="Configuration" isComposite="true" lower="0" upper="1" memberEnd="extension_Configuration Configuration-base_Package"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ExpressionContext" name="ExpressionContext">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ExpressionContext-base_NamedElement" name="base_NamedElement" association="NamedElement_ExpressionContext">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_ExpressionContext" name="A_NamedElement_ExpressionContext" memberEnd="extension_ExpressionContext ExpressionContext-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ExpressionContext" name="extension_ExpressionContext" type="ExpressionContext" isComposite="true" lower="0" upper="1" memberEnd="extension_ExpressionContext ExpressionContext-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwBranchPredictor" name="HwBranchPredictor">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwBranchPredictor_HwResource_generalization" general="HwResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaEventTrace" name="GaEventTrace">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaEventTrace-base_NamedElement" name="base_NamedElement" association="NamedElement_GaEventTrace">
+						<type href="http://schema.omg.org/spec/UML/2.1/NamedElement"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaEventTrace-location" name="location">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaEventTrace-content" name="content">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaEventTrace-format" name="format">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="NamedElement_GaEventTrace" name="A_NamedElement_GaEventTrace" memberEnd="extension_GaEventTrace GaEventTrace-base_NamedElement">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GaEventTrace" name="extension_GaEventTrace" type="GaEventTrace" isComposite="true" lower="0" upper="1" memberEnd="extension_GaEventTrace GaEventTrace-base_NamedElement"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TimedDomain" name="TimedDomain">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedDomain-base_Namespace" name="base_Namespace" association="Namespace_TimedDomain">
+						<type href="http://schema.omg.org/spec/UML/2.1/Namespace"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Namespace_TimedDomain" name="A_Namespace_TimedDomain" memberEnd="extension_TimedDomain TimedDomain-base_Namespace">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_TimedDomain" name="extension_TimedDomain" type="TimedDomain" isComposite="true" lower="0" upper="1" memberEnd="extension_TimedDomain TimedDomain-base_Namespace"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TimingResource" name="TimingResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="TimingResource_Resource_generalization" general="Resource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ClientServerFeature" name="ClientServerFeature">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClientServerFeature-base_BehavioralFeature" name="base_BehavioralFeature" association="BehavioralFeature_ClientServerFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioralFeature"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ClientServerFeature-kind" name="kind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioralFeature_ClientServerFeature" name="A_BehavioralFeature_ClientServerFeature" memberEnd="extension_ClientServerFeature ClientServerFeature-base_BehavioralFeature">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ClientServerFeature" name="extension_ClientServerFeature" type="ClientServerFeature" isComposite="true" lower="0" upper="1" memberEnd="extension_ClientServerFeature ClientServerFeature-base_BehavioralFeature"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaSchedObs" name="SaSchedObs">
+					<generalization xmi:type="uml:Generalization" xmi:id="SaSchedObs_GaTimedObs_generalization" general="GaTimedObs"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSchedObs-overlaps" name="overlaps">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSchedObs-suspensions" name="suspensions">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaSchedObs-blockT" name="blockT">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="PaLogicalResource" name="PaLogicalResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="PaLogicalResource_Resource_generalization" general="Resource"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaLogicalResource-throughput" name="throughput">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaLogicalResource-utilization" name="utilization">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="PaLogicalResource-poolSize" name="poolSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SaAnalysisContext" name="SaAnalysisContext">
+					<generalization xmi:type="uml:Generalization" xmi:id="SaAnalysisContext_GaAnalysisContext_generalization" general="GaAnalysisContext"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaAnalysisContext-isSched" name="isSched">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="SaAnalysisContext-optCriterion" name="optCriterion">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="RtUnit" name="RtUnit">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-base_BehavioredClassifier" name="base_BehavioredClassifier" association="BehavioredClassifier_RtUnit">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioredClassifier"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-srPoolPolicy" name="srPoolPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-memorySize" name="memorySize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-isDynamic" name="isDynamic">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-queueSchedPolicy" name="queueSchedPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-msgMaxSize" name="msgMaxSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-operationalMode" name="operationalMode">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-srPoolWaitingTime" name="srPoolWaitingTime">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-isMain" name="isMain">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-queueSize" name="queueSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtUnit-srPoolSize" name="srPoolSize">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioredClassifier_RtUnit" name="A_BehavioredClassifier_RtUnit" memberEnd="extension_RtUnit RtUnit-base_BehavioredClassifier">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtUnit" name="extension_RtUnit" type="RtUnit" isComposite="true" lower="0" upper="1" memberEnd="extension_RtUnit RtUnit-base_BehavioredClassifier"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SecondaryScheduler" name="SecondaryScheduler">
+					<generalization xmi:type="uml:Generalization" xmi:id="SecondaryScheduler_Scheduler_generalization" general="Scheduler"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TimedProcessing" name="TimedProcessing">
+					<generalization xmi:type="uml:Generalization" xmi:id="TimedProcessing_TimedElement_generalization" general="TimedElement"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedProcessing-base_Behavior" name="base_Behavior" association="Behavior_TimedProcessing">
+						<type href="http://schema.omg.org/spec/UML/2.1/Behavior"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedProcessing-base_Action" name="base_Action" association="Action_TimedProcessing">
+						<type href="http://schema.omg.org/spec/UML/2.1/Action"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedProcessing-base_Message" name="base_Message" association="Message_TimedProcessing">
+						<type href="http://schema.omg.org/spec/UML/2.1/Message"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedProcessing-finish" name="finish">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedProcessing-start" name="start">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedProcessing-duration" name="duration">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Behavior_TimedProcessing" name="A_Behavior_TimedProcessing" memberEnd="extension_TimedProcessing TimedProcessing-base_Behavior">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_TimedProcessing" name="extension_TimedProcessing" type="TimedProcessing" isComposite="true" lower="0" upper="1" memberEnd="extension_TimedProcessing TimedProcessing-base_Behavior"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Action_TimedProcessing" name="A_Action_TimedProcessing" memberEnd="extension_TimedProcessing TimedProcessing-base_Action">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_TimedProcessing" name="extension_TimedProcessing" type="TimedProcessing" isComposite="true" lower="0" upper="1" memberEnd="extension_TimedProcessing TimedProcessing-base_Action"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Message_TimedProcessing" name="A_Message_TimedProcessing" memberEnd="extension_TimedProcessing TimedProcessing-base_Message">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_TimedProcessing" name="extension_TimedProcessing" type="TimedProcessing" isComposite="true" lower="0" upper="1" memberEnd="extension_TimedProcessing TimedProcessing-base_Message"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="SharedDataCommResource" name="SharedDataCommResource">
+					<generalization xmi:type="uml:Generalization" xmi:id="SharedDataCommResource_SwCommunicationResource_generalization" general="SwCommunicationResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwProcessor" name="HwProcessor">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwProcessor_HwComputingResource_generalization" general="HwComputingResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="RtFeature" name="RtFeature">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtFeature-base_Port" name="base_Port" association="Port_RtFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/Port"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtFeature-base_Action" name="base_Action" association="Action_RtFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/Action"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtFeature-base_Signal" name="base_Signal" association="Signal_RtFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/Signal"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtFeature-base_Message" name="base_Message" association="Message_RtFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/Message"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtFeature-base_ConnectorEnd" name="base_ConnectorEnd" association="ConnectorEnd_RtFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/ConnectorEnd"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtFeature-base_Operation" name="base_Operation" association="Operation_RtFeature">
+						<type href="http://schema.omg.org/spec/UML/2.1/Operation"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Port_RtFeature" name="A_Port_RtFeature" memberEnd="extension_RtFeature RtFeature-base_Port">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtFeature" name="extension_RtFeature" type="RtFeature" isComposite="true" lower="0" upper="1" memberEnd="extension_RtFeature RtFeature-base_Port"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Action_RtFeature" name="A_Action_RtFeature" memberEnd="extension_RtFeature RtFeature-base_Action">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtFeature" name="extension_RtFeature" type="RtFeature" isComposite="true" lower="0" upper="1" memberEnd="extension_RtFeature RtFeature-base_Action"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Signal_RtFeature" name="A_Signal_RtFeature" memberEnd="extension_RtFeature RtFeature-base_Signal">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtFeature" name="extension_RtFeature" type="RtFeature" isComposite="true" lower="0" upper="1" memberEnd="extension_RtFeature RtFeature-base_Signal"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Message_RtFeature" name="A_Message_RtFeature" memberEnd="extension_RtFeature RtFeature-base_Message">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtFeature" name="extension_RtFeature" type="RtFeature" isComposite="true" lower="0" upper="1" memberEnd="extension_RtFeature RtFeature-base_Message"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="ConnectorEnd_RtFeature" name="A_ConnectorEnd_RtFeature" memberEnd="extension_RtFeature RtFeature-base_ConnectorEnd">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtFeature" name="extension_RtFeature" type="RtFeature" isComposite="true" lower="0" upper="1" memberEnd="extension_RtFeature RtFeature-base_ConnectorEnd"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Operation_RtFeature" name="A_Operation_RtFeature" memberEnd="extension_RtFeature RtFeature-base_Operation">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtFeature" name="extension_RtFeature" type="RtFeature" isComposite="true" lower="0" upper="1" memberEnd="extension_RtFeature RtFeature-base_Operation"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwDMA" name="HwDMA">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwDMA_HwStorageManager_generalization" general="HwStorageManager"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="HwDMA_HwArbiter_generalization" general="HwArbiter"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="HwDMA-transferWidth" name="transferWidth">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GaCommHost" name="GaCommHost">
+					<generalization xmi:type="uml:Generalization" xmi:id="GaCommHost_Scheduler_generalization" general="Scheduler"/>
+					<generalization xmi:type="uml:Generalization" xmi:id="GaCommHost_CommunicationMedia_generalization" general="CommunicationMedia"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaCommHost-throughput" name="throughput">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GaCommHost-utilization" name="utilization">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="ModeTransition" name="ModeTransition">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="ModeTransition-base_Transition" name="base_Transition" association="Transition_ModeTransition">
+						<type href="http://schema.omg.org/spec/UML/2.1/Transition"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Transition_ModeTransition" name="A_Transition_ModeTransition" memberEnd="extension_ModeTransition ModeTransition-base_Transition">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_ModeTransition" name="extension_ModeTransition" type="ModeTransition" isComposite="true" lower="0" upper="1" memberEnd="extension_ModeTransition ModeTransition-base_Transition"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="Nfp" name="Nfp">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="Nfp-base_Property" name="base_Property" association="Property_Nfp">
+						<type href="http://schema.omg.org/spec/UML/2.1/Property"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Property_Nfp" name="A_Property_Nfp" memberEnd="extension_Nfp Nfp-base_Property">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_Nfp" name="extension_Nfp" type="Nfp" isComposite="true" lower="0" upper="1" memberEnd="extension_Nfp Nfp-base_Property"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="HwArbiter" name="HwArbiter">
+					<generalization xmi:type="uml:Generalization" xmi:id="HwArbiter_HwCommunicationResource_generalization" general="HwCommunicationResource"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="TimedElement" name="TimedElement" isAbstract="true">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="TimedElement-on" name="on">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="RtService" name="RtService">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtService-base_BehavioralFeature" name="base_BehavioralFeature" association="BehavioralFeature_RtService">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioralFeature"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtService-exeKind" name="exeKind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtService-isAtomic" name="isAtomic">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtService-synchKind" name="synchKind">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="RtService-concPolicy" name="concPolicy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioralFeature_RtService" name="A_BehavioralFeature_RtService" memberEnd="extension_RtService RtService-base_BehavioralFeature">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_RtService" name="extension_RtService" type="RtService" isComposite="true" lower="0" upper="1" memberEnd="extension_RtService RtService-base_BehavioralFeature"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="GrService" name="GrService">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GrService-base_Behavior" name="base_Behavior" association="Behavior_GrService">
+						<type href="http://schema.omg.org/spec/UML/2.1/Behavior"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GrService-base_BehavioralFeature" name="base_BehavioralFeature" association="BehavioralFeature_GrService">
+						<type href="http://schema.omg.org/spec/UML/2.1/BehavioralFeature"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GrService-base_CollaborationOccurrence" name="base_CollaborationOccurrence" association="CollaborationOccurrence_GrService">
+						<type href="http://schema.omg.org/spec/UML/2.1/CollaborationOccurrence"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GrService-base_Collaboration" name="base_Collaboration" association="Collaboration_GrService">
+						<type href="http://schema.omg.org/spec/UML/2.1/Collaboration"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="GrService-base_Operation" name="base_Operation" association="Operation_GrService">
+						<type href="http://schema.omg.org/spec/UML/2.1/Operation"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Behavior_GrService" name="A_Behavior_GrService" memberEnd="extension_GrService GrService-base_Behavior">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GrService" name="extension_GrService" type="GrService" isComposite="true" lower="0" upper="1" memberEnd="extension_GrService GrService-base_Behavior"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="BehavioralFeature_GrService" name="A_BehavioralFeature_GrService" memberEnd="extension_GrService GrService-base_BehavioralFeature">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GrService" name="extension_GrService" type="GrService" isComposite="true" lower="0" upper="1" memberEnd="extension_GrService GrService-base_BehavioralFeature"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="CollaborationOccurrence_GrService" name="A_CollaborationOccurrence_GrService" memberEnd="extension_GrService GrService-base_CollaborationOccurrence">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GrService" name="extension_GrService" type="GrService" isComposite="true" lower="0" upper="1" memberEnd="extension_GrService GrService-base_CollaborationOccurrence"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Collaboration_GrService" name="A_Collaboration_GrService" memberEnd="extension_GrService GrService-base_Collaboration">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GrService" name="extension_GrService" type="GrService" isComposite="true" lower="0" upper="1" memberEnd="extension_GrService GrService-base_Collaboration"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Operation_GrService" name="A_Operation_GrService" memberEnd="extension_GrService GrService-base_Operation">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_GrService" name="extension_GrService" type="GrService" isComposite="true" lower="0" upper="1" memberEnd="extension_GrService GrService-base_Operation"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="NfpType" name="NfpType">
+					<generalization xmi:type="uml:Generalization" xmi:id="NfpType_TupleType_generalization" general="TupleType"/>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="NfpType-base_DataType" name="base_DataType" association="DataType_NfpType">
+						<type href="http://schema.omg.org/spec/UML/2.1/DataType"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="DataType_NfpType" name="A_DataType_NfpType" memberEnd="extension_NfpType NfpType-base_DataType">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_NfpType" name="extension_NfpType" type="NfpType" isComposite="true" lower="0" upper="1" memberEnd="extension_NfpType NfpType-base_DataType"/>
 				</packagedElement>
 			</uml:Profile>
 		</profiles>
