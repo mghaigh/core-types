@@ -1,14 +1,14 @@
-modelFilePath: "core-types/core-types.xml"
+modelFilePath: "mghaigh/core-types/core-types.xml"
 modelConfig:
   packageNames:
     typesPackage: "Core Types"
 loader:
   loaderURL: "http://localhost:7010"
-  configFilePath: "common-config/config/loaders/ea-xmi/config.yaml"
+  configFilePath: "mghaigh/common-config/config/loaders/ea-xmi/config.yaml"
 generators:
   #  MkDocs:
   - generatorURL: "http://localhost:9020"
-    configFilePath: "common-config/config/generators/mkdoc/config.yaml"
+    configFilePath: "mghaigh/common-config/config/generators/mkdoc/config.yaml"
   #  Screening:
   - generatorURL: "http://localhost:9035"
-    configFilePath: "common-config/config/generators/reversed/config.yaml"
+    configFilePath: "mghaigh/common-config/config/generators/reversed/config.yaml"
